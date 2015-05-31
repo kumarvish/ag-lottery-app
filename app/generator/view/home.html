@@ -1,0 +1,38 @@
+
+<div class="container">
+  <h2 class="col-xs-12">Lottery number generator</h2>
+  <div id="lottery-picks" class="col-md-6">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h3 class="panel-title">Lucky Dip</h3>
+      </div>
+      <div class="panel-body picks-panel-body">
+        <div class="panel-toolbar">
+          <div class="btn-group col-xs-12">
+            <button id="generate-number" ng-click="Generator.getNewNumbers()" class="btn btn-success col-xs-6"><span class="glyphicon glyphicon-refresh">&nbsp;New</span></button>
+            <button ng-click="Generator.addToWishList()" ng-class="{'disabled':!Generator.currentPick.numbers.length&gt;0}" class="btn btn-warning col-xs-6">&nbsp;Move to wish list</button>
+          </div>
+        </div>
+        <div class="picks col-xs-12 text-center"><span ng-repeat="n in Generator.currentPick.numbers" class="ballNumber{{n}} animated bounceIn">{{n}}</span></div>
+        <div ng-hide="Generator.currentPick.numbers.length&gt;0" class="col-xs-12 text-center">
+          <h5 class="text-muted">click 'New' to generate</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="wish-list-panel" class="col-md-6">
+    <div class="panel panel-info">
+      <div class="panel-heading">
+        <h3 class="panel-title">My wish list<a id="clear-wish-list-link" href="#" ng-show="Generator.wishList.length&gt;1" ng-click="Generator.clearWishList()" tooltip="clear my wish list" tooltip-placement="left" tooltip-append-to-body="true" class="pull-right">clear all</a></h3>
+      </div>
+      <div class="panel-body picks panel-body">
+        <div>
+          <div ng-repeat="picks in Generator.wishList" class="picks col-xs-12 text-center animated rollIn"><span ng-repeat="n in picks.numbers" class="ballNumber{{n}}">{{n}}</span><span ng-click="Generator.removeFromWishList($index)" tooltip="remove from my wish list" tooltip-placement="bottom" tooltip-append-to-body="true" class="glyphicon glyphicon-remove-circle remove-from-wish-list"></span></div>
+        </div>
+        <div ng-hide="Generator.wishList.length&gt;0" class="col-xs-12 text-center">
+          <h5 class="text-muted">Your wish list is empty</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

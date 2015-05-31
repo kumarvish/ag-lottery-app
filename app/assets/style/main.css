@@ -1,0 +1,147 @@
+body {
+    overflow-y: scroll;
+}
+
+.navbar {
+    border-radius: 0;
+}
+
+.btn:focus {
+    outline: none;
+    border-shadow: none;
+}
+
+.picks-panel-body {
+    padding-left: 0;
+    padding-top: 0;
+    padding-right: 0;
+    height: 108px;
+}
+
+.panel-toolbar .btn-group.col-xs-12 {
+    padding: 0;
+}
+
+.panel-toolbar .btn {
+    border-radius: 0;
+    border: none;
+}
+
+#clear-wish-list-link {
+    color: #a2a2a2;
+}
+
+#wish-list-panel .panel-body {
+    min-height: 108px;
+}
+
+#wish-list-panel .picks {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.picks span {
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
+    text-align: center;
+    font-size: 2em;
+    margin:5px;
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+.ballNumber1,
+.ballNumber2,
+.ballNumber3,
+.ballNumber4,
+.ballNumber5,
+.ballNumber6,
+.ballNumber7,
+.ballNumber8,
+.ballNumber9 {
+    background: gray linear-gradient(
+            360deg, gray, lightgray
+    ) ;color : #fff;
+
+}
+
+.ballNumber10,
+.ballNumber11,
+.ballNumber12,
+.ballNumber13,
+.ballNumber14,
+.ballNumber15,
+.ballNumber16,
+.ballNumber17,
+.ballNumber18,
+.ballNumber19 {
+    background: blue linear-gradient(
+            360deg, blue, lightblue
+    );
+    color: #cccccc;
+
+}
+
+.ballNumber20,
+.ballNumber21,
+.ballNumber22,
+.ballNumber23,
+.ballNumber24,
+.ballNumber25,
+.ballNumber26,
+.ballNumber27,
+.ballNumber28,
+.ballNumber29 {
+    background: pink linear-gradient(
+            360deg, pink, lightpink
+    );
+    color: #fff;
+}
+
+.ballNumber30,
+.ballNumber31,
+.ballNumber32,
+.ballNumber33,
+.ballNumber34,
+.ballNumber35,
+.ballNumber36,
+.ballNumber37,
+.ballNumber38,
+.ballNumber39 {
+    background: green linear-gradient(
+            360deg, green, lightgreen
+    );
+    color: #f0f0f0;
+}
+
+.ballNumber40,
+.ballNumber41,
+.ballNumber42,
+.ballNumber43,
+.ballNumber44,
+.ballNumber45,
+.ballNumber46,
+.ballNumber47,
+.ballNumber48,
+.ballNumber49 {
+    color: #666;
+    background: yellow linear-gradient(
+            360deg,
+            yellow, lightyellow
+    );
+}
+
+#generate-number {
+    margin-bottom: 10px;
+}
+
+.remove-from-wish-list {
+    cursor: pointer;
+}

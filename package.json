@@ -1,0 +1,23 @@
+{
+  "name": "LotteryBallApp",
+  "version": "1.0.0",
+  "description": "Your next chance to win big!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Vishwa Kumar",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.12.4",
+    "jade": "^1.10.0",
+    "morgan": "^1.5.3"
+  },
+  "devDependencies": {
+    "bower": "^1.4.1",
+    "jasmine-core": "^2.3.4",
+    "karma": "^0.12.35",
+    "karma-chrome-launcher": "^0.1.12",
+    "karma-jasmine": "^0.3.5"
+  }
+}

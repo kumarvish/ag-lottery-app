@@ -1,0 +1,23 @@
+doctype html
+html(ng-app="lotteryApp")
+    head
+        title= title
+        link(rel='stylesheet' , href='../assets/style/bootstrap-paper-theme.css')
+        link(rel='stylesheet', href='../assets/bower/animate.css/animate.css')
+        link(rel='stylesheet',href='../assets/style/main.css')
+    body.ng-cloak
+        .navbar.navbar-inverse
+            .container-fluid
+                .navbar-header
+                    a.navbar-brand(ui-sref='main') Brand
+                .navbar-collapse.collapse
+                    ul.nav.navbar-nav
+                        li(ui-sref-active="active")
+                            a(ui-sref="main") Home
+                        li(ui-sref-active="active")
+                            a(ui-sref="generator") Generator
+
+        block content
+            div(ui-view)
+        include scripts
+        block additionalScripts
