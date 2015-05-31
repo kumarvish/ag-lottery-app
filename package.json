@@ -4,7 +4,7 @@
   "description": "Your next chance to win big!",
   "main": "index.js",
   "scripts": {
-    "postinstall": "./node_modules/bower/bin/bower install"
+    "postinstall": "bower install"
   },
   "author": "Vishwa Kumar",
   "license": "ISC",
