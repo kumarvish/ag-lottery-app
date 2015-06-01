@@ -1,31 +1,49 @@
 block content
     .container
-        h2.col-xs-12 Lottery number generator
-        #lottery-picks.col-md-6
+        h2#page-title.col-xs-12.col-sm-12.clearfix Lottery number generator
+        #lottery-picks.col-md-6.col-xs-12.col-sm-12
             .panel.panel-primary
                 .panel-heading
                     h3.panel-title Lucky Dip
                 .panel-body.picks-panel-body
                     .panel-toolbar
                         .btn-group.col-xs-12
-                            button#generate-number.btn.btn-success.col-xs-6(ng-click="Generator.getNewNumbers()")
-                                span.glyphicon.glyphicon-refresh &nbsp;New
-                            button.btn.btn-warning.col-xs-6(ng-click="Generator.addToWishList()",ng-class="{'disabled':!Generator.currentPick.numbers.length>0}") &nbsp;Move to wish list
+                            button#generate-number.btn.btn-success.col-xs-12.col-sm-6(
+                                ng-click="generator.getNewNumbers()")
+                                span.glyphicon.glyphicon-refresh
+                                span &nbsp;New
+                            button.btn.btn-warning.col-xs-12.col-sm-6(
+                                ng-click="generator.addToWishList()",
+                                ng-class="{'disabled':!generator.currentPick.numbers.length>0}") &nbsp;Move to wish list
                     .picks.col-xs-12.text-center
-                        span(ng-repeat="n in Generator.currentPick.numbers",class='ballNumber{{n}} animated bounceIn') {{n}}
-                    .col-xs-12.text-center(ng-hide="Generator.currentPick.numbers.length>0")
+                        span(
+                            ng-repeat="n in generator.currentPick.numbers",
+                            class='balls ballNumber{{n}} animated bounceIn') {{n}}
+                    .col-xs-12.text-center(
+                        ng-hide="generator.currentPick.numbers.length>0")
                         h5.text-muted click 'New' to generate
 
-        #wish-list-panel.col-md-6
+        #wish-list-panel.col-md-6.col-xs-12.col-sm-12
             .panel.panel-info
                 .panel-heading
                     h3.panel-title My wish list
-                        a#clear-wish-list-link.pull-right(href="#" ng-show="Generator.wishList.length>1" ng-click="Generator.clearWishList()",tooltip="clear my wish list",tooltip-placement="left",tooltip-append-to-body="true") clear all
+                        a#clear-wish-list-link.pull-right(
+                                                        href="#"
+                                                        ng-show="generator.wishList.length>1"
+                                                        ng-click="generator.clearWishList()",
+                                                        tooltip="clear my wish list",
+                                                        tooltip-placement="left",
+                                                        tooltip-append-to-body="true") clear all
                 .panel-body.picks.panel-body
                     div
-                        .picks.col-xs-12.text-center(ng-repeat="picks in Generator.wishList",class="animated rollIn")
-                            span(ng-repeat="n in picks.numbers",class='ballNumber{{n}}') {{n}}
-                            span.glyphicon.glyphicon-remove-circle.remove-from-wish-list(ng-click="Generator.removeFromWishList($index)",tooltip="remove from my wish list",tooltip-placement="bottom",tooltip-append-to-body="true")
-                    .col-xs-12.text-center(ng-hide="Generator.wishList.length>0")
+                        .picks.col-xs-12.text-center(
+                            ng-repeat="picks in generator.wishList",class="animated rollIn")
+                            span(ng-repeat="n in picks.numbers",class='balls ballNumber{{n}}') {{n}}
+                            span.glyphicon.glyphicon-remove-circle.remove-from-wish-list(
+                                                        ng-click="generator.removeFromWishList($index)",
+                                                        tooltip="remove from my wish list",
+                                                        tooltip-placement="bottom",
+                                                        tooltip-append-to-body="true")
+                    .col-xs-12.text-center(ng-hide="generator.wishList.length>0")
                         h5.text-muted Your wish list is empty
 

@@ -12,7 +12,7 @@ angular.module('lotteryApp')
             .state('generator', {
                 url: '/generator',
                 templateUrl: '/partials/generator/view/home',
-                controller:'GeneratorHomeCtrl as Generator'
+                controller:'GeneratorHomeCtrl as generator'
             })
             .state('default', {
                 url: '/',

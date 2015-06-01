@@ -9,8 +9,10 @@
   <body class="ng-cloak">
     <div class="navbar navbar-inverse">
       <div class="container-fluid">
-        <div class="navbar-header"><a ui-sref="main" class="navbar-brand">Brand</a></div>
-        <div class="navbar-collapse collapse">
+        <div class="navbar-header">
+          <button type="button" data-toggle="collapse" data-target="#appNavBar" class="navbar-toggle collapsed"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a ui-sref="main" class="navbar-brand">Brand</a>
+        </div>
+        <div id="appNavBar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <li ui-sref-active="active"><a ui-sref="main">Home</a></li>
             <li ui-sref-active="active"><a ui-sref="generator">Generator</a></li>

@@ -9,8 +9,13 @@ html(ng-app="lotteryApp")
         .navbar.navbar-inverse
             .container-fluid
                 .navbar-header
+                    button.navbar-toggle.collapsed(type="button",data-toggle="collapse" data-target="#appNavBar")
+                        span.sr-only Toggle navigation
+                        span.icon-bar
+                        span.icon-bar
+                        span.icon-bar
                     a.navbar-brand(ui-sref='main') Brand
-                .navbar-collapse.collapse
+                .navbar-collapse.collapse(id="appNavBar")
                     ul.nav.navbar-nav
                         li(ui-sref-active="active")
                             a(ui-sref="main") Home

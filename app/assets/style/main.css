@@ -2,6 +2,11 @@ body {
     overflow-y: scroll;
 }
 
+h2#page-title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
 .navbar {
     border-radius: 0;
 }
@@ -15,7 +20,7 @@ body {
     padding-left: 0;
     padding-top: 0;
     padding-right: 0;
-    height: 108px;
+    min-height: 108px;
 }
 
 .panel-toolbar .btn-group.col-xs-12 {
@@ -38,18 +43,19 @@ body {
 #wish-list-panel .picks {
     padding-top: 5px;
     padding-bottom: 5px;
+
 }
 
 .picks span {
     display: inline-block;
-    height: 50px;
-    width: 50px;
-    line-height: 50px;
-    -moz-border-radius: 25px;
-    border-radius: 25px;
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
     text-align: center;
-    font-size: 2em;
-    margin:5px;
+    font-size: 1.2em;
+    margin: 5px;
     -moz-user-select: -moz-none;
     -khtml-user-select: none;
     -webkit-user-select: none;
@@ -68,7 +74,8 @@ body {
 .ballNumber9 {
     background: gray linear-gradient(
             360deg, gray, lightgray
-    ) ;color : #fff;
+    );
+    color: #fff;
 
 }
 
@@ -138,10 +145,25 @@ body {
     );
 }
 
-#generate-number {
+#lottery-picks .btn-group {
     margin-bottom: 10px;
 }
 
 .remove-from-wish-list {
     cursor: pointer;
+}
+
+@media (min-width: 768px) {
+    h2#page-title {
+        font-size: 45px;
+    }
+
+    .picks span {
+        height: 50px;
+        width: 50px;
+        line-height: 50px;
+        -moz-border-radius: 25px;
+        border-radius: 25px;
+        font-size: 2em;
+    }
 }
